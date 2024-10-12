@@ -44,7 +44,7 @@ async def run_example():
     if (debug=='True'):
         uuid = await pubsub.listen_chat_moderator_actions(user.id, user.id ,callback_whisper)
     else:
-        uuid = await pubsub.listen_chat_moderator_actions(user.id, user.id ,callback_whisper)
+        uuid = await pubsub.listen_channel_points(user.id ,callback_whisper)
     input('program is running . press ENTER to close...\n')
     print('closing program...')
     # you do not need to unlisten to topics before stopping but you can listen and unlisten at any moment you want
