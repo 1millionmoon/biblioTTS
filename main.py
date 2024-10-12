@@ -51,6 +51,7 @@ async def run_example():
     await pubsub.unlisten(uuid)
     pubsub.stop()
     await twitch.close()
+    input('press ENTER to close...\n')
 
 asyncio.run(run_example())
 
