@@ -37,8 +37,11 @@ async def run_example():
     pubsub = PubSub(twitch)
     pubsub.start()
     if (debug=='False'):
-        reward_list = await twitch.get_custom_reward(user.id, reward_id=None, only_manageable_rewards=False)
-        pprint(reward_list)
+        try:
+            reward_list = await twitch.get_custom_reward(user.id, reward_id=None, only_manageable_rewards=False)
+            pprint(reward_list)
+        except:
+            print("Get redeem list error")
 
     # you can either start listening before or after you started pubsub.
     if (debug=='True'):
