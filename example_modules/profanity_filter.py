@@ -8,3 +8,5 @@ if __name__ == "__main__":
     censored_text = profanity.censor(text)
     print(censored_text)
     # You **** of ****.
+
+    input('press ENTER to close...\n')
