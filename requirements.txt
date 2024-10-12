@@ -1,3 +1,4 @@
 better-profanity==0.7.0
 pyttsx3==2.98
 twitchAPI==4.3.1
+configparser==7.1.0

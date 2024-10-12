@@ -1,5 +1,5 @@
 [twitch]
 channel = 1millionmoon
-oauth = oauth:https://twitchapps.com/tmi/
 client_id = bhjavszn7zzzz0m5celjhv4sbshb7y
 client_secret = r62rh70vm8efzwpqm89r4c7fx9wo68
+debug = True
