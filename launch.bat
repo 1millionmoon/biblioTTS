@@ -1,2 +1,2 @@
 pip install -r requirements.txt
-py twitch_API.py
+py main.py
