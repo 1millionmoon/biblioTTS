@@ -10,7 +10,7 @@ Features include customizable profanity filter by editing the custom_profanity_w
 Please install Python 3.x stable version for using this program  
 
 ### How to use :
-1. Fill the config.ini file with appropriate data
+1. Fill the config.ini file with appropriate data using Notepad or similar word edit programs
 2. Run launch.bat
 3. To force stop, press CTRL+C
   
