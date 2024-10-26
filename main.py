@@ -29,9 +29,8 @@ def init_config():
         APP_ID = config['twitch']['app_id']
         APP_SECRET = config['twitch']['app_secret']
         REDEEM_LIST = str(config['twitch']['redeem_list']).lower().replace(" ", "").split(";")
-        USER_SCOPE = [AuthScope.CHANNEL_READ_REDEMPTIONS]
 
-        TEXT_CHAR_LEN = config['text']['text_character_length']
+        TEXT_CHAR_LEN = int(config['text']['text_character_length'])
         CST_WORDLIST = config['text']['custom_wordlist']
 
         if not (all([APP_ID,APP_SECRET,TARGET_CHANNEL,REDEEM_LIST,USER_SCOPE,TEXT_CHAR_LEN,CST_WORDLIST])):
@@ -112,7 +111,6 @@ async def connect_twitch():
 
     # you can either start listening before or after you started pubsub.
     try : 
-        uuid = await pubsub.listen_channel_points(user.id ,callback_response)
     except Exception as e: 
         print("PubSub listen error")
 
