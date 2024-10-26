@@ -31,7 +31,7 @@ def init_config():
         REDEEM_LIST = str(config['twitch']['redeem_list']).lower().replace(" ", "").split(";")
         USER_SCOPE = [AuthScope.CHANNEL_READ_REDEMPTIONS]
 
-        TEXT_CHAR_LEN = config['text']['text_character_length']
+        TEXT_CHAR_LEN = int(config['text']['text_character_length'])
         CST_WORDLIST = config['text']['custom_wordlist']
 
         if not (all([APP_ID,APP_SECRET,TARGET_CHANNEL,REDEEM_LIST,USER_SCOPE,TEXT_CHAR_LEN,CST_WORDLIST])):
