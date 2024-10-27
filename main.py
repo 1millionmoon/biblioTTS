@@ -61,7 +61,7 @@ def custom_profanity_wordlist(custom):
 def text_filter(text):
     censored_text = text
     try : 
-        censored_text = profanity.censor(text)
+        censored_text = better_profanity.profanity.censor(text)
     except Exception as e: 
         print("Text filter error")
     return censored_text
@@ -69,7 +69,10 @@ def text_filter(text):
 def call_tts(text):
     try : 
         print("Call TTS : " + text)
-        pyttsx3.speak(text)     #single line execution with default settings
+        tts_engine = pyttsx3.init("sapi5")
+        tts_engine.say(text)
+        tts_engine.runAndWait()
+        tts_engine.stop()
     except Exception as e: 
         print("Call TTS error")
 
